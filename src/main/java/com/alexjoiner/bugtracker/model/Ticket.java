@@ -20,7 +20,7 @@ public class Ticket implements Serializable {
     private String ticketStatus;
     private String ticketType;
     @Column(nullable = false,updatable = false)
-    private Date created;
+    private String createdDate;
 
     public void setId(Long id) {
         this.id = id;
@@ -95,12 +95,12 @@ public class Ticket implements Serializable {
         this.ticketType = ticketType;
     }
 
-    public Date getCreated() {
-        return created;
+    public String getCreatedDate() {
+        return createdDate;
     }
 
-    public void setCreated(Date created) {
-        this.created = created;
+    public void setCreatedDate(String created) {
+        this.createdDate = created;
     }
 
     @Override
@@ -115,7 +115,7 @@ public class Ticket implements Serializable {
                 ", priority='" + priority + '\'' +
                 ", ticketStatus='" + ticketStatus + '\'' +
                 ", ticketType='" + ticketType + '\'' +
-                ", created=" + created +
+                ", created=" + createdDate +
                 '}';
     }
 }
